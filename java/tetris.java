@@ -9,7 +9,7 @@ public class tetris {
         for (int i = 0; i < n; i++) {/*
                                       * this is the crucial part where we look for things where the middle part is
                                       * different than the corners and thus increment count i.e. when '1001' OR '010'
-                                      * OR '000100' occur anywhere in the middle
+                                      * OR '000100' occurs anywhere in the middle
                                       */
             if (i != n - 1) {
                 if (a[i] != x) {
