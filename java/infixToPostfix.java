@@ -14,6 +14,7 @@ public class infixToPostfix {
 
     String conversion(String s){
         Stack<Character> st= new Stack<Character>();
+        
         String ans="";
         for(int i=0; i<s.length(); i++){
             char c=s.charAt(i);
