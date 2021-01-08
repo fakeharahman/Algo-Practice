@@ -1,5 +1,5 @@
 package dp;
-
+// divide subset to 2 parts and get min dif
 // imp
 public class noSubsetDif {
     int rec(int[] arr, int n, int sum, int tot, int dif) {
