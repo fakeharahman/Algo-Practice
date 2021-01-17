@@ -26,9 +26,9 @@ public class paintersPartition {
     }
 
     public static void main(String[] args) {
-        int[] a={ 10, 20, 60, 50, 30, 40 }; 
-        int n=a.length;
-        int p=3;
-        System.out.println(new paintersPartition().rec(a, 0, n-1, p));
+        int[] a = { 10, 20, 60, 50, 30, 40 };
+        int n = a.length;
+        int p = 3;
+        System.out.println(new paintersPartition().rec(a, 0, n - 1, p));
     }
 }
