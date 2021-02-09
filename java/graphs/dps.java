@@ -1,9 +1,9 @@
 package graphs;
 
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.LinkedList;
 
-public class dps {
+public class dps { //depth first search
     private int V;
     private LinkedList<Integer> adj[];
     @SuppressWarnings("unchecked") dps(int v){
