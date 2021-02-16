@@ -2,10 +2,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class shortestDis {
-    static int shortestPath(int[][] m, int r, int c){
-        int sc=0, sr=0;
-        int[] rv={0,0,1,-1};
-        int[] cv={1,-1,0,0};
+    static int shortestPath(int[][] m, int r, int c){ // 2 start, 1 wall, 0 floor, 3 exit in matrix m
+        int sc=0, sr=0; //start row and col
+        int[] rv={0,0,1,-1}, cv={1,-1,0,0}; //direction vectors
         boolean[][] visited=new boolean[r+1][c+1];
         Queue<Integer> rq=new LinkedList<Integer>();
         Queue<Integer> cq=new LinkedList<Integer>();
@@ -16,13 +15,11 @@ public class shortestDis {
         while(!rq.isEmpty()){
             int rr=rq.remove();
             int cc=cq.remove();
-            if(m[rr][cc]==3) return steps;
-            
+            if(m[rr][cc]==3) return steps;    
             for(int i=0; i<4; i++){
                 int dr=rr+rv[i];
                 int dc=cc+cv[i];
-                if(dr<0||dr>r) continue;
-                if(dc<0||dc>c) continue;
+                if(dr<0||dr>r ||dc<0||dc>c) continue;
                 if(visited[dr][dc]) continue;
                 if(m[dr][dc]==1) continue;
                 rq.add(dr);
@@ -36,18 +33,11 @@ public class shortestDis {
                 nodes_in_next_layer=0;
                 steps++;
             }
-
         }
-        return -1;
-
-
-        
+        return -1;  
     }
-
-
-
     public static void main(String[] args) {
-        int[][] m = {
+        int[][] m = { // 2 start, 1 wall, 0 floor, 3 exit
          { 2, 0, 0, 1, 0, 0, 0 },
          { 0, 1, 0, 0, 0, 1, 0 },
          { 0, 1, 0, 0, 0, 0, 0 },
