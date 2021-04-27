@@ -28,8 +28,6 @@ public class bfs {
             int x=q.remove();
             for(int i: adj[x]){
                 if(visited[i]==true) continue;
-                
-                
                 // System.out.println(i);
                 q.add(i);
                 visited[i]=true;

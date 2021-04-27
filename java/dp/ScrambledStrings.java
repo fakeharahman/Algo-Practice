@@ -69,8 +69,8 @@ public class ScrambledStrings {
     }
 
     public static void main(String[] args) {
-        String s1 = "coder";
-        String s2 = "ocred";
+        String s1 = "abcdefghijklmnopq";
+        String s2 = "efghijklmnopqcadb";
         // char[] a =s1.toCharArray();
         int n = s1.length();
         Map<String,Boolean> dp=new HashMap<String,Boolean>();  
