@@ -18,6 +18,7 @@ public class DijkstralazyShortestPath {
     public void shortest(int s){
         Comparator<int[]> c=new PriorityComparator();
         PriorityQueue<int[]> pq=new PriorityQueue<int[]>(10, c);
+        
         int[] dist = new int[V];
         boolean[] vis=new boolean[V];
         for(int i=0 ; i<V; i++){
