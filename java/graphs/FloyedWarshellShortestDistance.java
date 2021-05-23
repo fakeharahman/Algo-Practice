@@ -41,18 +41,32 @@ public class FloyedWarshellShortestDistance {
                 }
             }
         }
-        int j=2;
-        // System.out.print(g.next[1][j]);
-        while(g.next[1][j]!=j){
-            System.out.print(g.next[1][j]);
-            j=g.next[1][j];
+
+        for (int k = 0; k < g.V; k++) {
+            for (int i = 0; i < g.V; i++) {
+                for (int j = 0; j < g.V; j++) {
+                    // System.out.println(dp[i][k]+" "+ dp[k][j]+ " "+dp[i][j]);
+                   if(dp[i][k]+ dp[k][j]<dp[i][j]){
+                    dp[i][j]=Double.NEGATIVE_INFINITY;
+                    g.next[i][j]=-1;
+                   }
+                }
+            }
         }
+
+        // int j=2;
+        // // System.out.print(g.next[1][j]);
+        // while(g.next[1][j]!=j){
+        //     System.out.print(g.next[1][j]);
+        //     j=g.next[1][j];
+        // }
         System.out.println(dp[1][2]);
     }
 
     public static void main(String[] args) {
         Graph g = new Graph(4);
         g.add(1, 2, 3.0);
+        g.add(2, 1, -5.0);
         g.add(1, 3, 1.0);
         g.add(3, 2, 1.0);
         shortestPath(g);

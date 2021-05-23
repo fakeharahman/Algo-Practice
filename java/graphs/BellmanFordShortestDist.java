@@ -49,7 +49,7 @@ public class BellmanFordShortestDist {
     }
 
     public static void main(String[] args) {
-        int E = 10, V = 9, start = 0;
+        int E = 10, V = 9;
 
         Edge edges[] = new Edge[E];
         edges[0] = new Edge(0, 1, 1);

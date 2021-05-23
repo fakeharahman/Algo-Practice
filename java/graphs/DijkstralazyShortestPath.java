@@ -61,6 +61,8 @@ public class DijkstralazyShortestPath {
         g.shortest(0);
     }
 }
+
+
 public class PriorityComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] x, int[] y) {

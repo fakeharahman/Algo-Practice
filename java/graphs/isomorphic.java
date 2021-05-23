@@ -1,7 +1,7 @@
 package graphs;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 
@@ -127,7 +127,7 @@ public class isomorphic {
     String encoding(Node c) {
         // System.out.println("size="+ c.vert.size());
 
-        int l=0;
+        // int l=0;
         ArrayList<String> labels=new ArrayList<String>();
         String s = "";
         for (int i = 0; i < c.vert.size(); i++) {

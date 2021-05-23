@@ -62,7 +62,7 @@ public class allPossiblePath {
         // g.add(1, 2);
         // g.add(2, 3);
         // g.allPathsSourceTarget();
-        allPossiblePath g= new allPossiblePath();
+        // allPossiblePath g= new allPossiblePath();
         int[][] graph={{4,3,1},{3,2,4},{3},{4},{}};
         allPathsSourceTarget(graph);
     }
