@@ -5,29 +5,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MaxFlowFordFulkerson {
-    public static class Edge{
-        Edge residual;
-        int to;
-        int from;
-        int capacity;
-        int flow;
-        Edge(int from, int to, int cap){
-            this.from=from;
-            this.to=to;
-            capacity=cap;
-        }
-        public boolean isResidual(){
-            return capacity==0;
-        }
-        void augment(int bottleNeck){
-            flow+=bottleNeck;
-            residual.flow-=bottleNeck;
-        }
-        public int flowCap(){
-            return capacity-flow;
-        }
-    }
+    
     public static class graph{
+        public static class Edge{
+            Edge residual;
+            int to;
+            int from;
+            int capacity;
+            int flow;
+            Edge(int from, int to, int cap){
+                this.from=from;
+                this.to=to;
+                capacity=cap;
+            }
+            public boolean isResidual(){
+                return capacity==0;
+            }
+            void augment(int bottleNeck){
+                flow+=bottleNeck;
+                residual.flow-=bottleNeck;
+            }
+            public int flowCap(){
+                return capacity-flow;
+            }
+        }
         int n;
         int s;
         int t;  
