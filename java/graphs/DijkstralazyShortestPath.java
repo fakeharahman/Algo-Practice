@@ -63,7 +63,7 @@ public class DijkstralazyShortestPath {
 }
 
 
-public class PriorityComparator implements Comparator<int[]> {
+ class PriorityComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] x, int[] y) {
         // Assume neither string is null. Real code should
