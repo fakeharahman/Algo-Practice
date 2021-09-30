@@ -1,4 +1,4 @@
-package graphs;
+package graphs1;
 //wrong answer
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -68,7 +68,7 @@ public class PrimsMST {
         //         pq.add(next);
         //     }
         // }
-        while(tot!=V-2){
+        while(tot!=V-2){ //V-1
             if(pq.isEmpty()){
                 System.out.println("Graph cant be formed");
                 return;
@@ -92,7 +92,6 @@ public class PrimsMST {
     }
     public static void main(String[] args) {
         PrimsMST g=new PrimsMST();
-        // Edge e=;
         g.init(5);
         g.addEdge(1, 0, 10);
         g.addEdge(0, 2, 6);

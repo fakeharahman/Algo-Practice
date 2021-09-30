@@ -45,7 +45,7 @@ public class dijtra2 {
         Arrays.fill(ans, Integer.MAX_VALUE);
         ans[s] = 0;
         for (int i = 0; i < adj[s].size(); i++) {
-            pq.add(adj[0].get(i));
+            pq.add(adj[s].get(i));
         }
         shortest();
 
@@ -62,9 +62,7 @@ public class dijtra2 {
                     pq.add(t);
             }
         }
-        
-        
-        
+
         shortest();
     }
 

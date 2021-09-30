@@ -1,4 +1,4 @@
-package graphs;
+package graphs1;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

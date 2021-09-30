@@ -9,46 +9,36 @@ public class ReverseLinkedListInGroups {
             next = null;
         }
     }
-    Node next=null;
+    // Node next=null;
     Node head=null;
-    Node root=null;
-    void rev(int k){
-        next=head;
+    // Node prev=null;
+    Node rev(Node root,int k){
+        if(root==null) return null;
         Node prev=null;
-        while(next!=null){
-            Node t=revUtil(next, k);
-            if(prev==null) prev=t;
-            else
-            prev.next=next;
+        Node cur=root;
+        Node next=null;
+        int t=k;
+        while(t!=0&&cur!=null){
+            t--;
+            next=cur.next;
+            cur.next=prev;
+            prev=cur;
+            cur=next;
+            
+            // cur=next;
+        }
+        // if(next!=null)
+        if(next!=null){
+            root.next=rev(next, k);
         }
         
-        // if(root==null){
-        //     print(head);
-        // }else{
-        //     print(root);
-        // }
+        return prev;
     }
-    Node revUtil(Node n, int k){
-        if(n==null) {
-            next=null;
-            return null;}
-        if(k==1){
-            if(root==null){    
-                root=n;
-            }
-            next=n.next;
-            // revUtil(next, t, t);
-            return n;
-        }
-        Node t=revUtil(n.next, k-1);
-        if(t==null){
-            return t;
-        }
-        t.next=n;
-        return n;
 
 
-    }
+
+
+
 
     void print(Node n){
         if(n==null)return;
@@ -65,12 +55,13 @@ public class ReverseLinkedListInGroups {
         head.next.next.next.next.next=new Node(8);
         head.next.next.next.next.next.next=new Node(9);
         head.next.next.next.next.next.next.next=new Node(10);
-        head.next.next.next.next.next.next.next.next=new Node(11);
+        // head.next.next.next.next.next.next.next.next=new Node(11);
+        print(rev(head, 3));
     }
     public static void main(String[] args) {
         ReverseLinkedListInGroups l=new ReverseLinkedListInGroups();
         l.construct();
-        l.rev(3);
+        
 
     }
 }
