@@ -1,0 +1,12 @@
+{
+    "id": {
+        "story_id": "id here",
+        "story_text": "text",
+        "no_of_questions": 6,
+        "question_1": "question 1",
+        "answer_char_ranges_1": "865:888|789:790",
+        "is_answer_absent_1": "0.0",
+        "validated_answers_1": "NaN",
+        "question_2": "question 2..."
+    }
+}
